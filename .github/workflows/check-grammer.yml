@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: npm install -g write-good
-      - run: write-good resume.tex
+      - run: write-good resume.tex README.md
   proselint:
     name: proselint
     runs-on: ubuntu-latest
@@ -22,4 +22,4 @@ jobs:
         with:
           packages: |
             proselint
-      - run: proselint resume.tex
+      - run: proselint resume.tex README.md
