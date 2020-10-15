@@ -1,6 +1,61 @@
 \documentclass{article}
 
-\usepackage{hyperref}
+% For Title modifications
+\usepackage{titling} % Gives the \theauthor command
+
+% For Section modifications
+\usepackage[center]{titlesec} % allows for the titleformat command
+
+% For Margin modification
+\usepackage[margin=1in]{geometry} % allows for changing the shape of a document
+
+% https://tex.stackexchange.com/questions/823/remove-ugly-borders-around-clickable-cross-references-and-hyperlinks
+% Hyper Link modifications
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	colorlinks = true, % Colours links instead of ugly boxes
+	urlcolor   = blue  % Colour for external hyperlinks
+}
+
+% Title modification
+\renewcommand{\maketitle}{
+\begin{center}
+{\Large\bfseries
+\theauthor}
+
+\vspace{0.75em}
+
+\href{mailto://defrann8208@outlook.com}{defrann8208@outlook.com} ---
+\url{https://nicholasdefranco.xyz/}
+
+\vspace{0.25em}
+
+\end{center}
+}
+
+% Section modification
+\titleformat{\section}
+{\bfseries\Large}
+{}
+{0em}
+{}[\titlerule]
+
+% Subsection modification
+\titleformat{\subsection}
+{\center\bfseries}
+{}
+{0em}
+{\underline}[\vspace{0.5em}]
+
+% Subsection modification
+\titleformat{\subsubsection}[runin]
+{\center\bfseries}
+{}
+{0em}
+{}[\hspace{0.25em}---\vspace{1.0em}]
+
+% Item modification
+\renewcommand{\labelitemi}{-}
 
 \begin{document}
 
