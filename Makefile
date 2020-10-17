@@ -5,11 +5,11 @@ resume.pdf: resume.tex
 
 secret:
 	git secret reveal
-	git config filter.rev.clean ./revert.sh
-	sed -i 's/^%\(\\input\)/\1/g' resume.tex
+	@git config filter.rev.clean ./revert.sh
+	@sed -i 's/^%\(\\input\)/\1/g' resume.tex
 
 rmsecret:
-	./revert.sh resume.tex
+	@./revert.sh resume.tex
 	rm -f secret
 
 clean:
