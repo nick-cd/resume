@@ -1,4 +1,4 @@
-# My Resume
+# My Résumé
 
 Ensure you have [Latex](https://www.latex-project.org/get/) installed in
 order to compile the code with `make`.
