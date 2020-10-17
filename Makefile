@@ -1,7 +1,10 @@
 resume.pdf: resume.tex
 	pdflatex resume.tex
 
-.PHONY: clean secret rmsecret
+.PHONY: clean preview secret rmsecret
+
+preview: resume.pdf
+	xdg-open resume.pdf
 
 secret:
 	git secret reveal
