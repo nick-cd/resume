@@ -8,3 +8,14 @@ order to compile the code with `make`.
 ```bash
 make # Creates a pdf file from the source code
 ```
+
+## Secret
+
+If you know the "secret" please ensure that you have
+[sobolevn/git-secret](https://github.com/sobolevn/git-secret) installed. After
+cloning, run:
+
+```bash
+make secret # reveals the secret
+make # then compile, secret should show in the resultant pdf
+```
